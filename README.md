@@ -1,20 +1,20 @@
 # kbot
 Telegram bot with golang
 
-#link to bot
+# link to bot
 t.me/peterbunin_bot
 
 # make TELE_TOKEN variable
 
-read -s TELE_TOKEN
-[put token here]
+read -s TELE_TOKEN  
+[put token here]  
 save
 
 # check variable output
 
 echo $TELE_TOKEN
 
-#export variable to OS
+# export variable to OS
 
 export $TELE_TOKEN
 
