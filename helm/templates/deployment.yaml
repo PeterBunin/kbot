@@ -5,6 +5,9 @@ metadata:
   labels:
     {{- include "helm.labels" . | nindent 4 }}
 spec:
+  containers:
+    - name: {{ .Release.Name }}
+      image: {{ .Values.image.repository }}/{{ .Chart.Name }}:{{ .Values.image.tag }}-{{ .Values.image.arch | default "amd64"}}
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
