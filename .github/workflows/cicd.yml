@@ -35,8 +35,8 @@ jobs:
       - name: Build&Push
         env:
           APP: "kbot"
-          REGISTRY: ${{ secrets.DOCKERHUB_USERNAME }}
-        run: make image push
+          REGISTRY: "${{ env.REGISTRY }}/${{ github.actor }}"
+        run: make image push 
   cd:
     name: CD
     needs: ci
