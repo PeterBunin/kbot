@@ -1,5 +1,5 @@
 APP := $(shell basename $(shell git remote get-url origin))
-REGISTRY := letsmakesome
+REGISTRY := ghcr.io/petebunin
 VERSION=$(shell git describe --tags --abbrev=0 --tags)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux #linux darwin windows
 TARGETARCH=amd64 #amd64 arm64 
@@ -28,3 +28,6 @@ push:
 clean:
 	rm -rf kbotbot
 	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+
+linux:
+	GOOS=linux GOARCH=amd64 go build -v -o kbot -ldflags "-X=github.com/PeterBunin/kbot/cmd.appVersion=${VERSION}"
