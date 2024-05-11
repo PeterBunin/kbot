@@ -2,6 +2,10 @@ name: KBOT-CICD
 
 on: push
 
+env:
+    REGISTRY: ghcr.io
+    IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   ci:
     name: CI
@@ -16,7 +20,7 @@ jobs:
       - name: Run test
         run: make test
 
-      - name: GitHub Conntainer Registy login
+      - name: GitHub Container Registy login
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
