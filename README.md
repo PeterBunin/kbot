@@ -2,7 +2,7 @@
 Telegram bot with golang
 
 # link to bot
-t.me/peterbunin_bot
+[t.me/peterbunin_bot](https://t.me/peterbunin_bot)
 
 # make TELE_TOKEN variable
 
