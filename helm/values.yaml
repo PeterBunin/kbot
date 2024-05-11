@@ -8,9 +8,11 @@ autoscaling:
 #ingress:
 #  enabled: false
 image:
-  repository: letsmakesome/kbot
+  registry: ghcr.io
+  repository: peterbunin/kbot
   tag: "1.0.0-81937e7"
   arch: amd64
+  os: linux
 secret:
   name: kbot
   key: token
