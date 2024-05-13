@@ -9,7 +9,7 @@ autoscaling:
 #  enabled: false
 image:
   repository: letsmakesome/kbot
-  tag: "v1.0.0-29b56f8"
+  tag: "v1.0.0-adf96ad"
   arch: amd64
   os: linux
 secret:
