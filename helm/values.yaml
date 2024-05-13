@@ -11,6 +11,7 @@ image:
   repository: letsmakesome/kbot
   tag: "v1.0.0-29b56f8"
   arch: amd64
+  os: linux
 secret:
   name: kbot
   key: token
