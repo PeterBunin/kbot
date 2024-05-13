@@ -1,10 +1,10 @@
-# kbot
+### kbot
 Telegram bot with golang
 
 # link to bot
-t.me/peterbunin_bot
+[t.me/peterbunin_bot](https://t.me/peterbunin_bot)
 
-# make TELE_TOKEN variable
+## make TELE_TOKEN variable
 
 read -s TELE_TOKEN  
 [put token here]  
